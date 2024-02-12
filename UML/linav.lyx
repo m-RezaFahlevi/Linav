@@ -1,0 +1,7282 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\options ruled, linesnumbered, vlined, boxed, commentsnumbered
+\use_default_options true
+\begin_modules
+algorithm2e
+theorems-ams-bytype
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.25in
+\topmargin 1in
+\rightmargin 1.25in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand*
+\backslash
+descriptionlabel[1]{
+\backslash
+hspace
+\backslash
+labelsep
+\backslash
+normalfont #1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Linav: Computation of Vectors in Linear Algebra
+\end_layout
+
+\begin_layout Author
+Muhammad Reza Fahlevi
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Fahlevisia Website
+\end_layout
+
+\begin_layout Date
+12 February 2024
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hrule
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Muhammad Reza Fahlevi, S.Kom.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/muhammadrezafahlevi/Documents/LearnRcpp/learn_cpp/linear_algebra/Linav/iD/orcid_16x16.png
+	width 9pt
+	height 9pt
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "https://orcid.org/0009-0007-6787-6479"
+target "https://orcid.org/0009-0007-6787-6479"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+URL: 
+\begin_inset CommandInset href
+LatexCommand href
+name "https://www.fahlevisia.com/post_articles/linav/"
+target "https://www.fahlevisia.com/post_articles/linav/"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+E-mail: 
+\begin_inset CommandInset href
+LatexCommand href
+name "muhammadrezafahlevi666@gmail.com"
+target "mailto:muhammadrezafahlevi666@gmail.com"
+type "mailto:"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Country: Indonesia
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/muhammadrezafahlevi/Documents/fahlevisia/www/fahlevisiaicon.png
+	scale 25
+	rotateOrigin leftBottom
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Linav: Computation of Vectors in Linear Algebra © 2024 by Muhammad Reza
+ Fahlevi is licensed under Attribution-NonCommercial-ShareAlike 4.0 International.
+ To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-
+sa/4.0/
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/muhammadrezafahlevi/Documents/LearnRcpp/learn_cpp/linear_algebra/Linav/ccbyncsa/cc.svg
+	width 18pt
+	height 18pt
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/muhammadrezafahlevi/Documents/LearnRcpp/learn_cpp/linear_algebra/Linav/ccbyncsa/by.svg
+	width 18pt
+	height 18pt
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/muhammadrezafahlevi/Documents/LearnRcpp/learn_cpp/linear_algebra/Linav/ccbyncsa/nc.svg
+	width 18pt
+	height 18pt
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/muhammadrezafahlevi/Documents/LearnRcpp/learn_cpp/linear_algebra/Linav/ccbyncsa/sa.svg
+	width 18pt
+	height 18pt
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+rfoot{
+\backslash
+thepage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cfoot{}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Header
+\begin_inset Graphics
+	filename /home/muhammadrezafahlevi/Documents/QuartoBlog/www/mrflabicon.png
+	scale 10
+
+\end_inset
+
+ Fahlevisia
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\end_inset
+
+Article
+\end_layout
+
+\begin_layout Abstract
+C++ is one of favorite programming language for those who are having good
+ understanding in algorithms and interested in computing something manually.
+ One of advantage computation using C++ is its speed when execute the program,
+ it is suitable for approximating hard real-parameter optimization problem.
+ It is so often that such a problem is formulated in the form of vectors,
+ and main operators used in vectors are pointwise (elementwise) addition
+ and s-multiplication.
+ Eventhough there are library out there to do so, it is a good practice
+ to develope our own C++ header 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\end_inset
+
+ for computation of vectors in linear algebra, at least once in a lifetime.
+ By using 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+, it is possible to do a computation of vectors, especially to compute the
+ pointwise addition and s-multiplication which is make it opens a great
+ possibility of interesting application thereof.
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+C++ is a programming language created by Bjarne Strostup, and originally
+ it's intended to be a superset of C programming language since in C++ we
+ could create a class .
+ So, we can do the so-called object oriented programming (
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Stroustrup, B., 2020"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ One of useful header file of C++ is 
+\begin_inset Formula $\texttt{vector}$
+\end_inset
+
+.
+ Unlike an ordinary array, where once we have declared an array of fixed
+ length, once we try to add another element to an ordinary array which exceed
+ its length, it will cause an error.
+ Meanwhile, if we declare something like the following code 
+\end_layout
+
+\begin_layout LyX-Code
+#include <vector>
+\end_layout
+
+\begin_layout LyX-Code
+#include <iostream>
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+int main(void) {
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+std::vector<double> v {1.0, 2.0, 3.0};
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+v.pushback(4.3);
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+std::cout << v.at(3) << '
+\backslash
+n';
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout Standard
+it will not produce an error, and the elements of 
+\begin_inset Formula $\texttt{v}$
+\end_inset
+
+ after 
+\begin_inset Formula $4.3$
+\end_inset
+
+ is included in 
+\begin_inset Formula $\texttt{v}$
+\end_inset
+
+ are 
+\begin_inset Formula $1.0,2.0,3.0,$
+\end_inset
+
+ and 
+\begin_inset Formula $4.3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Nevertheless, the problem arise when we try to treate 
+\begin_inset Formula $\texttt{std::vector<double> v \{1.0,2.0,3.0\}}$
+\end_inset
+
+ as a vector in linear algebra.
+ For example, we want to do a pointwise addition and s-multiplication as
+ follows 
+\end_layout
+
+\begin_layout LyX-Code
+std::vector<double> v {1.0, 2.0, 3.0};
+\end_layout
+
+\begin_layout LyX-Code
+std::vector<double> u = v + v; // produce an error
+\end_layout
+
+\begin_layout LyX-Code
+double sc = 3.5;
+\end_layout
+
+\begin_layout LyX-Code
+std::vector<double> w = sc * v; // also produce an error
+\end_layout
+
+\begin_layout Standard
+We expect that 
+\begin_inset Formula $\texttt{u}$
+\end_inset
+
+ is a vector having 
+\begin_inset Formula $(2.0,4.0,6.0)$
+\end_inset
+
+ as its elements, and 
+\begin_inset Formula $\texttt{w}$
+\end_inset
+
+ is a vector having 
+\begin_inset Formula $(3.5,7.0,10.5)$
+\end_inset
+
+ as its element.
+ Instead, we got an error.
+\end_layout
+
+\begin_layout Standard
+If only 
+\begin_inset Formula $\texttt{std::vector}$
+\end_inset
+
+ support pointwise addition and s-multiplication, then we capable to do
+ a numerical computation, extensively.
+ Especially, computation of vectors in linear algebra, which has various
+ application.
+ The following passages discuss about the applications of vectors in linear
+ algebra and the use of 
+\begin_inset Formula $\texttt{std::vector}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In Artinez, C., et al.
+ (2018), they explained genetic algorithms construction to solve real-parameter
+ optimization problem, the solutions of the problem (individuals) are encoded
+ as the elements of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+-vector space.
+ The crossover operator of genetic algorithm takes a pair of vectors as
+ its input and produced another vectors as its output.
+ And so for its mutation operator, the only different is that mutation operator
+ takes only one vector as its input and produce one vector as its output.
+ A genetic algorithms where the individuals are encoded (represented) in
+ vectors is called real-coded genetic algorithms.
+ One of main research in this subject is how to develop a better crossover
+ and mutation operators.
+ A review about genetic algorithms was done by Katoch S., et al.
+ (2021), where in this paper, Katoch S., et al.
+ provide a table for different name and mathematical formulation of crossover
+ and mutation operators, and it is so often that crossover and mutation
+ operators use pointwise addition and s-multiplication in its mathematical
+ formulation.
+ Pointwise addition and s-multiplication in computation of vectors in linear
+ algebra also used in differential evolution algorithms, and a great review
+ of this method and its application was done by Bilal et al., (2020).
+\end_layout
+
+\begin_layout Standard
+One of advance computation of the use of 
+\begin_inset Formula $\texttt{std::vector}$
+\end_inset
+
+ is SU3lib, a C++ library for computation of Wigner and Racah coefficients
+ of SU(3) by Dytrych, T.
+ et al.
+ (2021).
+ In this paper, 
+\begin_inset Formula $\texttt{std::vector<double>}$
+\end_inset
+
+ data type is used as representation of the arrangement of resulting coefficient
+s as a linear array.
+\end_layout
+
+\begin_layout Standard
+There is a C++ standard library header specialize in the computation of
+ linear algebra called 
+\begin_inset Formula $\texttt{linalg}$
+\end_inset
+
+, which capable to perform pointwise addition and s-multiplication.
+ Nevertheless, it is a good practice to develope our own header, at least
+ once in a lifetime.
+ Therefore, in this article, we develope a C++ header called 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+ which stand for vector in linear algebra, and we develope 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+ as an extension of 
+\begin_inset Formula $\texttt{std::vector}$
+\end_inset
+
+.
+ By using 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+, computation with regards to vector in linear algebra is possible.
+\end_layout
+
+\begin_layout Standard
+This paper is organized as follows.
+ Section 2 is the discussion of theory and computation with regards to vectors
+ in linear algebra.
+ In section 2, we have definition of abstract vector space for which the
+ definition of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+-vector spaces is defined thereof, pointwise (elementwise) operators, linear
+ maps, and finally the 
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+-norm.
+ In section 3, we implement the abstract concept of mathematics into real
+ programming language C++.
+ Section 4 is results and discussion, in this section we provide a table
+ of  summary of computation.
+ Finally, we conclude our discussion in section 5.
+\end_layout
+
+\begin_layout Standard
+If the honourable reader is only interested in the applications of things,
+ then he/she may skip section 2.
+ If the honourable reader is interested in science of computation, especially
+ in numerical computation, then it is recommended for he/she to read section
+ 2.
+\end_layout
+
+\begin_layout Section
+Theory and Computation
+\end_layout
+
+\begin_layout Subsection
+Abstract Vector Space and Space of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+[abstract vector space] The vector space of a set 
+\begin_inset Formula $V$
+\end_inset
+
+ is the triplet 
+\begin_inset Formula $(V,+,\cdot)$
+\end_inset
+
+ where 
+\begin_inset Formula $+\colon V\times V\to V$
+\end_inset
+
+ and 
+\begin_inset Formula $\cdot\colon\mathbb{R}\times V\to V$
+\end_inset
+
+ are known as pointwise addition and s-multiplication, respectively.
+ Which 
+\begin_inset Formula $\forall\vec{x},\vec{y},\vec{z}\in V$
+\end_inset
+
+ and 
+\begin_inset Formula $\forall\lambda,\mu\in\mathbb{R}$
+\end_inset
+
+ satisfy the following 8 axioms (
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Dadhley, R., 2019"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+; 
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Körner, T.W., 2012"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Definition
+(1).
+ [the commutative law] 
+\begin_inset Formula $\vec{x}+\vec{y}=\vec{y}+\vec{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(2).
+ [the associative law] 
+\begin_inset Formula $(\vec{x}+\vec{y})+\vec{z}=\vec{x}+(\vec{y}+\vec{z})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(3).
+ [the existance of neutral element] 
+\begin_inset Formula $\exists\vec{0}\in V\colon\forall\vec{x}\in V\colon\vec{x}+\vec{0}=\vec{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(4).
+ [the existance of inverse element] 
+\begin_inset Formula $\forall\vec{x}\in V\colon\exists\vec{x}^{\prime}\in V\colon\vec{x}+\vec{x}^{\prime}=\vec{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(5).
+ [the associative law] 
+\begin_inset Formula $\lambda\cdot(\mu\cdot\vec{x})=(\lambda\cdot\mu)\cdot\vec{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(6).
+ [the distributive law] 
+\begin_inset Formula $(\lambda+\mu)\vec{\cdot x}=\lambda\cdot\vec{x}+\mu\cdot\vec{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(7).
+ [the distributive law] 
+\begin_inset Formula $\lambda\cdot(\vec{x}+\vec{y})=\lambda\cdot\vec{x}+\lambda\cdot\vec{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(8).
+ [the existance of unitary element] 
+\begin_inset Formula $\exists\iota\in\mathbb{R}\colon\forall\vec{x}\in V\colon\iota\cdot\vec{x}=\vec{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+The element of vector space 
+\begin_inset Formula $(V,+,\cdot)$
+\end_inset
+
+ is called vector, conviniently.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $(U,+,\cdot)$
+\end_inset
+
+ and 
+\begin_inset Formula $(V,+,\cdot)$
+\end_inset
+
+ are vector spaces s.t.
+ 
+\begin_inset Formula $U\subseteq V$
+\end_inset
+
+, then 
+\begin_inset Formula $U$
+\end_inset
+
+ is defined as the subspace of 
+\begin_inset Formula $V$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The set 
+\begin_inset Formula $\mathbb{R}^{n}\coloneqq\mathbb{R}\times\mathbb{R}\times\cdots\times\mathbb{R}$
+\end_inset
+
+ is the set of 
+\begin_inset Formula $n$
+\end_inset
+
+-tuples of all real numbers i.e., 
+\begin_inset Formula 
+\begin{equation}
+\mathbb{R}^{n}\coloneqq\{(x_{1},x_{2},\cdots,x_{n})\colon\forall i=1,2,\ldots,n,\,x_{i}\in\mathbb{R}\}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+One of special case of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ is when 
+\begin_inset Formula $n=2$
+\end_inset
+
+ or 
+\begin_inset Formula $n=3$
+\end_inset
+
+, i.e.,
+\begin_inset Formula 
+\begin{equation}
+\mathbb{R}^{2}\coloneqq\{(x_{1},x_{2})\colon x_{1},x_{2}\in\mathbb{R}\}\quad\text{or }\quad\mathbb{R}^{3}\coloneqq\{(x_{1},x_{2},x_{3})\colon x_{1},x_{2},x_{3}\in\mathbb{R}\}
+\end{equation}
+
+\end_inset
+
+and the element of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ is called a point in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Notation.
+
+\series default
+ 
+\begin_inset Formula $n$
+\end_inset
+
+-tuple of a real number is denoted by a letter with an arrow on that letter.
+ E.g., 
+\begin_inset Formula $\vec{x},\vec{y},\vec{z},\text{etc.}$
+\end_inset
+
+ Thereby, if 
+\begin_inset Formula $\vec{x}\in\mathbb{R}^{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{y}\in\mathbb{R}^{3}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\vec{x}=(x_{1},x_{2})^{\top}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{y}=(y_{1},y_{2},y_{3})^{\top}$
+\end_inset
+
+, then 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ is a point in 
+\begin_inset Formula $\mathbb{R}^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+ is a point in 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+By using the definition of abstract vector space, we are capable to construct
+ the vector space of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The following triplet 
+\begin_inset Formula $(\mathbb{R}^{n},+,\cdot)$
+\end_inset
+
+ is a 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+-vector space s.t.
+ if the pointwise addition and s-multiplication are defined as follows
+\end_layout
+
+\begin_layout Example
+(i).
+ [pointwise addition] 
+\begin_inset Formula $+\colon\mathbb{R}^{n}\times\mathbb{R}^{n}\to\mathbb{R}^{n}$
+\end_inset
+
+ s.t.
+\begin_inset Formula 
+\begin{equation}
+\forall\vec{x},\vec{y}\in\mathbb{R}^{n}\colon(\vec{x},\vec{y})\mapsto\vec{x}+\vec{y}\coloneqq(x_{1}+y_{1},x_{2}+y_{2},\ldots,x_{n}+y_{n})^{\top}\label{eq:pointwiseadd}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(ii).
+ [s-multiplication] 
+\begin_inset Formula $\cdot\colon\mathbb{R}\times\mathbb{R}^{n}\to\mathbb{R}^{n}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula 
+\begin{equation}
+\forall\lambda\in\mathbb{\mathbb{R}}\colon\forall\vec{x}\in\mathbb{R}^{n}\colon(\vec{x},\lambda)\mapsto\lambda\cdot\vec{x}=(\lambda x_{1},\lambda x_{2},\ldots,\lambda x_{n})^{\top}\label{eq:s-multiplication}
+\end{equation}
+
+\end_inset
+
+then it satisfy the 8 axioms stated in the definition of abstract vector
+ spaces.
+\end_layout
+
+\begin_layout Proof
+The existance of the neutral element for 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ is the 
+\begin_inset Formula $n$
+\end_inset
+
+-tuple s.t.
+ all elements such 
+\begin_inset Formula $n$
+\end_inset
+
+-tuple are zero, i.e., 
+\begin_inset Formula $\vec{0}=(0,0,\ldots,0)^{\top}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\vec{0}$
+\end_inset
+
+ is called as a null vector and 
+\begin_inset Formula $\vec{0}\in\mathbb{R}^{n}$
+\end_inset
+
+, then 
+\begin_inset Formula $\vec{0}$
+\end_inset
+
+ is defined as the null vector in 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+ thus, 
+\begin_inset Formula $\forall\vec{x}\in\mathbb{R}^{n}\colon\vec{x}+\vec{0}=\vec{x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The existance of the inverse element can be showed by observing the s-multiplica
+tion of 
+\begin_inset Formula $\forall\vec{x}$
+\end_inset
+
+ by 
+\begin_inset Formula $-1$
+\end_inset
+
+ is 
+\begin_inset Formula $-\vec{x}=(-x_{1},-x_{2},\ldots,-x_{n})^{\top}$
+\end_inset
+
+ and 
+\begin_inset Formula $-\vec{x}\in\mathbb{R}^{n}$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $\forall\vec{x}\in\mathbb{R}\colon\vec{x}+(-1)\cdot\vec{x}=\vec{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The existance of unitary element of 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ is 
+\begin_inset Formula $1$
+\end_inset
+
+, so we have that 
+\begin_inset Formula $\forall\vec{x}\in\mathbb{R}^{n}\colon1\cdot\vec{x}=\vec{x}$
+\end_inset
+
+.
+ The rest is trivial.
+ After checking all 8-axioms stated in the definition of abstract vector
+ space, we have that the following triplet 
+\begin_inset Formula $(\mathbb{R}^{n},+,\cdot)$
+\end_inset
+
+ indeed a vector spaces.
+\end_layout
+
+\begin_layout Subsection
+Pointwise Operators from 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+ to Itself
+\end_layout
+
+\begin_layout Standard
+From previous section we have seen 2 pointwise operators namely, pointwise
+ addition and s-multi-plication.
+ Notice that these operators are not addition and multiplication of real
+ numbers, instead, pointwise addition operator is addition for vector space.
+ Similarly, the s-multiplication is multiplication of real number and vector
+ which yields a vector.
+ In order to understand what we mean by this, observe the distributive law
+ in the definition of vector space, it's stated that 
+\begin_inset Formula $\forall\vec{x}\in V,\forall\lambda,\mu\in\mathbb{R}\colon(\lambda+\mu)\cdot\vec{x}=\lambda\cdot\vec{x}+\mu\cdot\vec{x}$
+\end_inset
+
+, more explicitly, this axiom can be rewritten as follow
+\begin_inset Formula 
+\begin{equation}
+\forall\vec{x}\in V\colon\forall\lambda,\mu\in\mathbb{R}\colon(\lambda+_{\mathbb{R}}\mu)\cdot_{V}\vec{x}=\lambda\cdot_{V}\vec{x}+_{V}\mu\cdot_{V}\vec{x}
+\end{equation}
+
+\end_inset
+
+observe the subscript of each operator.
+ On the left hand side, we have that 
+\begin_inset Formula $+_{\mathbb{R}}$
+\end_inset
+
+ is addition operator on two real numbers, meanwhile, on the right hand
+ side, we only have 
+\begin_inset Formula $+_{V}$
+\end_inset
+
+ which is pointwise addition, for which it's addition on the vector space
+ 
+\begin_inset Formula $V$
+\end_inset
+
+, which is different from 
+\begin_inset Formula $+_{\mathbb{R}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For the case of s-multiplication, observe the associative law in the definition
+ of vector space, this axiom can be rewritten more explicitly as follow
+\begin_inset Formula 
+\begin{equation}
+\forall\vec{x}\in\mathbb{R}^{n}\colon\forall\lambda,\mu\in\mathbb{R}\colon(\lambda\cdot_{\mathbb{R}}\mu)\cdot_{V}\vec{x}=\lambda\cdot_{V}(\mu\cdot_{V}\vec{x})
+\end{equation}
+
+\end_inset
+
+on the left hand side, we have 
+\begin_inset Formula $\cdot_{\mathbb{R}}$
+\end_inset
+
+ on 
+\begin_inset Formula $(\lambda\cdot_{\mathbb{R}}\mu)$
+\end_inset
+
+ which is multiplication of 2 real numbers, meanwhile, on the right hand
+ side we only have 
+\begin_inset Formula $\cdot_{V}$
+\end_inset
+
+ which is s-multiplication, a multiplication of real number and vector which
+ yields a vector, and it's different multiplication from 
+\begin_inset Formula $\cdot_{\mathbb{R}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+At the first glimpse, perharps our honorable readers think these are just
+ what every gentleman and lady know, the subscript on the pointwise addition
+ and s-multiplication i.e., 
+\begin_inset Formula $+_{V}$
+\end_inset
+
+ and 
+\begin_inset Formula $\cdot_{V}$
+\end_inset
+
+ just 
+\begin_inset Quotes eld
+\end_inset
+
+unnecessary abstraction
+\begin_inset Quotes erd
+\end_inset
+
+, apperently.
+ However, in the computation point of view
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\end_inset
+
+ which is application of these 
+\begin_inset Quotes eld
+\end_inset
+
+unnecessary abstraction
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\end_inset
+
+it turn out that it serves clarity of what kind of object that we need,
+ and what operators which take those object as its input and what kind of
+ object that the output will produce (
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Dadhley, R., 2019"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Another operators which take a vector as its input and produce a vector
+ beside pointwise addition and s-multiplication are pointwise subtraction,
+ multiplication, powered by, absolute value, and normalize vector.
+\end_layout
+
+\begin_layout Standard
+We compute the pointwise addition as it is defined, and so for the s-multiplicat
+ion, i.e, for pointwise addition we have 2 vectors, and then we define a
+ vector which is the addition 2 vectors thereof.
+ Similarly, for s-multiplication, we have a vector and a real number, then
+ we define a vector which is a vector obtained from a vector we have and
+ its components are multiplied by a real number (see 
+\series bold
+Example 1
+\series default
+).
+\end_layout
+
+\begin_layout Standard
+Theoritically, pointwise substraction is a composition of pointwise addition
+ and s-multiplication of two vectors, 
+\begin_inset Formula $-_{V}\equiv+_{V}\circ\cdot_{V}$
+\end_inset
+
+ i.e, a pointwise addition 
+\emph on
+after 
+\emph default
+s-multiplication of 2 vectors.
+ So, the 
+\begin_inset Formula $-_{V}$
+\end_inset
+
+ theoritically defined as 
+\begin_inset Formula 
+\begin{align}
+-_{V} & \equiv+\circ\cdot\colon V\times(\mathbb{R}\times V)\to V\\
+ & \textit{s.t., }\exists\lambda\colon\forall\vec{x}\colon\forall\vec{y}\colon(\vec{x},(\lambda,\vec{y}))\mapsto(\vec{x},\lambda\cdot\vec{y})\mapsto\vec{x}+\lambda\cdot\vec{y}
+\end{align}
+
+\end_inset
+
+by set 
+\begin_inset Formula $\lambda=-1$
+\end_inset
+
+, thus 
+\begin_inset Formula 
+\begin{equation}
+-_{V}(\vec{x},\vec{y})\equiv\vec{x}+(-1)\vec{y}\eqqcolon\vec{x}-\vec{y}
+\end{equation}
+
+\end_inset
+
+Nevertheless, it's not practical to compute the pointwise substraction by
+ taking the s-multiplication of vector by 
+\begin_inset Formula $-1$
+\end_inset
+
+ and then take its pointwise addition by vector, instead, we just compute
+ the pointwise substraction as we compute the pointwise addition, but we
+ use 
+\begin_inset Formula $-$
+\end_inset
+
+ operator on its elements, i.e., if 
+\begin_inset Formula $\vec{x}=(x_{1,}x_{2},\ldots,x_{n})^{\top}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{y}=(y_{1},y_{2},\ldots,y_{n})^{\top}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{align}
+-\colon V\times V & \to V\\
+ & \textit{s.t., }\forall\vec{x}\colon\forall\vec{y}\colon(\vec{x},\vec{y})\mapsto\vec{x}-\vec{y}\coloneqq(x_{1}-y_{1},x_{2}-y_{2},\ldots,x_{n}-y_{n})^{\top}\label{eq:pointwisesubstraction}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $\vec{x},\vec{y}\in\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda\in\mathbb{R}$
+\end_inset
+
+, the following are elementwise multiplication, powered by, and absolute
+ value operators for vectors, its map, and its computation.
+\end_layout
+
+\begin_layout Definition
+(1) [elementwise multiplication] 
+\begin_inset Formula $\ast\colon V\times V\to V$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula 
+\begin{equation}
+(\vec{x},\vec{y})\mapsto\vec{x}\ast\vec{y}\coloneqq(x_{1}y_{1},x_{2}y_{2},\ldots,x_{n}y_{n})^{\top}\label{eq:elwisemultiplication}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(2) [elementwise powered by] 
+\begin_inset Formula $\text{pow}(\cdot,\cdot)\colon V\times\mathbb{R}\to V$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula 
+\begin{equation}
+(\vec{x},\lambda)\mapsto\text{pow}(\vec{x},\lambda)\coloneqq(x_{1}^{\lambda},x_{2}^{\lambda},\ldots,x_{n}^{\lambda})^{\top}\label{eq:elwisepoweredby}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(3) [elementwise absolute value] 
+\begin_inset Formula $\text{abs}(\cdot)\colon V\to V$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula 
+\begin{equation}
+\vec{x}\mapsto\text{abs}(\vec{x})\coloneqq(\vert x_{1}\vert,\vert x_{2}\vert,\ldots,\vert x_{n}\vert)^{\top}\label{eq:elwiseabs}
+\end{equation}
+
+\end_inset
+
+we use these operators 
+\emph on
+as it is
+\emph default
+ to do a computation of 2 vectors when involving these operators.
+\end_layout
+
+\begin_layout Subsection
+Linear Maps
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $(V,+,\cdot)$
+\end_inset
+
+ and 
+\begin_inset Formula $(W,+,\cdot)$
+\end_inset
+
+ are vector spaces, then a map 
+\begin_inset Formula $\phi\colon V\to W$
+\end_inset
+
+ is linear if and only if 
+\begin_inset Formula $\phi$
+\end_inset
+
+ satisfy the following properties (
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Körner, T.W., 2012"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Definition
+(1).
+ 
+\begin_inset Formula $\forall\vec{x},\vec{y}\in V\colon\phi(\vec{x}+\vec{y})=\phi(\vec{x})+\phi(\vec{y})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(2).
+ 
+\begin_inset Formula $\forall\vec{x}\in V\colon\forall\lambda\in\mathbb{\mathbb{R}}\colon\phi(\lambda\vec{x})=\lambda\phi(\vec{x})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+[the sum of component]
+\begin_inset CommandInset label
+LatexCommand label
+name "[the-sum-of-comp]"
+
+\end_inset
+
+ Let 
+\begin_inset Formula $(\mathbb{R}^{n},+,\cdot)$
+\end_inset
+
+ be vector space and 
+\begin_inset Formula $\vec{x}\in\mathbb{R}^{n}$
+\end_inset
+
+ , then the sum of component of a vector 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ is defined as 
+\begin_inset Formula $\text{sum}(\cdot)\colon\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula 
+\begin{equation}
+\forall\vec{x}\colon\vec{x}\mapsto\text{sum}(\vec{x})\coloneqq\sum_{i=1}^{n}x_{i}=x_{1}+x_{2}+\cdots+x_{n}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+The sum of component of a vector i.e., 
+\begin_inset Formula $\text{sum}(\cdot)$
+\end_inset
+
+ is a linear map.
+\end_layout
+
+\begin_layout Proof
+In order to prove either a map is linear or not, then we must check such
+ a map satisfy the definition of a linear map.
+ To do so, let 
+\begin_inset Formula $(\mathbb{R}^{n},+,\cdot)$
+\end_inset
+
+ be vector space.
+\end_layout
+
+\begin_layout Proof
+(1).
+ Observe that for 
+\begin_inset Formula $\text{sum}(\cdot)\colon\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+, by definition
+\begin_inset Formula 
+\begin{align*}
+\forall\vec{x},\vec{y}\in\mathbb{R}^{n}\colon & \text{sum}(\vec{x}+\vec{y})=\sum_{i=1}^{n}(x_{i}+y_{i})=\sum_{i=1}^{n}x_{i}+\sum_{i=1}^{n}y_{i}=\text{sum}(\vec{x})+\text{sum}(\vec{y})\\
+\therefore\quad & \text{sum}(\vec{x}+\vec{y})=\text{sum}(\vec{x})+\text{sum}(\vec{y})
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(2).
+ Observe that 
+\begin_inset Formula 
+\begin{align*}
+\forall\vec{x}\in\mathbb{R}^{n}\colon\forall\lambda\in\mathbb{R}\colon & \text{sum}(\lambda\vec{x})=\sum_{i=1}^{n}\lambda x_{i}=\lambda\sum_{i=1}^{n}x_{i}=\lambda\text{ sum}(\vec{x})\\
+\therefore\quad & \text{sum}(\lambda\vec{x})=\lambda\text{\text{ sum}(\ensuremath{\vec{x})}}
+\end{align*}
+
+\end_inset
+
+Thereby, the sum of component operator satisfy definition of a linear map.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Theoritically, it's okay to compute the sum of component by using definition
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "[the-sum-of-comp]"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ as it is.
+ However, it is not so when we attempt to compute it by using a programming
+ language like C++.
+ Due to numerical issue, we compute the sum of componen 
+\begin_inset Formula $\text{sum}(\cdot)\colon\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ by using Kahan's sum algorithm as follows (
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Solomon, J., 2015"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:Kahan's-sum"
+
+\end_inset
+
+Kahan's sum, 
+\begin_inset Formula $\text{sum}(\cdot)\colon\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Define 
+\begin_inset Formula $\vec{x}\in\mathbb{R}^{n}$
+\end_inset
+
+ s.t., 
+\begin_inset Formula $\vec{x}=(x_{1},x_{2},\ldots,x_{n})^{\top}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $s,s_{\text{next}},c\in\mathbb{R}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $s,s_{\text{next}},c\longleftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+For{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $i\longleftarrow1,2,\ldots,n$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $v\longleftarrow x_{i}+c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s_{\text{next}}\longleftarrow s+v$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $c\longleftarrow v-(s_{\text{next}}-s)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $s\longleftarrow s_{\text{next}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Return{
+\end_layout
+
+\end_inset
+
+s
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+[the inner product]
+\begin_inset CommandInset label
+LatexCommand label
+name "[the-inner-product]"
+
+\end_inset
+
+ Let 
+\begin_inset Formula $(\mathbb{R}^{n},+,\cdot)$
+\end_inset
+
+ be vector space and 
+\begin_inset Formula $\vec{x},\vec{y}\in\mathbb{R}^{n}$
+\end_inset
+
+ , then the inner product of a two vectors 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+ are defined as 
+\begin_inset Formula $\langle\cdot,\cdot\rangle\colon\mathbb{R}^{n}\times\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ s.t.
+\begin_inset Formula 
+\begin{equation}
+\forall\vec{x}\colon\forall\vec{y}\colon(\vec{x},\vec{y})\mapsto\langle\vec{x},\vec{y}\rangle\coloneqq\sum_{i=1}^{n}x_{i}y_{i}=x_{1}y_{1}+x_{2}y_{2}+\cdots+x_{n}y_{n}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+\begin_inset CommandInset label
+LatexCommand label
+name "lem2"
+
+\end_inset
+
+Suppose that (
+\begin_inset Formula $\mathbb{R}^{n},+,\cdot)$
+\end_inset
+
+ be vector space and the following map 
+\begin_inset Formula $\langle\cdot,\cdot\rangle\colon\mathbb{R}^{n}\times\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ is the inner product of 
+\begin_inset Formula $2$
+\end_inset
+
+ vectors, let 
+\begin_inset Formula $\vec{x},\vec{y},\vec{z}\in\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda,\mu\in\mathbb{R}$
+\end_inset
+
+.
+ Then, the following properties hold.
+\end_layout
+
+\begin_layout Lemma
+(1) 
+\begin_inset Formula $\langle\vec{x},\vec{x}\rangle\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+(2) 
+\begin_inset Formula $\langle\vec{x},\vec{x}\rangle=0\Leftrightarrow\vec{x}=\vec{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+(3) 
+\begin_inset Formula $\langle\vec{x},\vec{y}\rangle=\langle\vec{y},\vec{x}\rangle$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+(4) 
+\begin_inset Formula $\langle\vec{x}+\vec{y},\vec{z}\rangle=\langle\vec{x},\vec{z}\rangle+\langle\vec{y},\vec{z}\rangle$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+(5) 
+\begin_inset Formula $\langle\vec{x},\vec{y}+\vec{z}\rangle=\langle\vec{x},\vec{y}\rangle+\langle\vec{x},\vec{z}\rangle$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Lemma
+(6) 
+\begin_inset Formula $\langle\lambda\vec{x},\mu\vec{y}\rangle=\lambda\mu\langle\vec{x},\vec{y}\rangle$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(1) Let 
+\begin_inset Formula $\vec{x}=(x_{1},x_{2},\ldots,x_{n})^{\top}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $x_{i}\in\mathbb{R}$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,2,\ldots,n$
+\end_inset
+
+, then 
+\begin_inset Formula $\forall x\in\mathbb{R}\colon x^{2}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $x=0\Leftrightarrow x^{2}=0$
+\end_inset
+
+.
+ Thereby
+\begin_inset Formula 
+\begin{align*}
+\langle\vec{x},\vec{x}\rangle & =\sum_{i=1}^{n}x_{i}^{2}\geq0\\
+\therefore\langle\vec{x},\vec{x}\rangle & \geq0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(2) Special case in (1) is 
+\begin_inset Formula $x=0\Leftrightarrow x^{2}=0$
+\end_inset
+
+, let 
+\begin_inset Formula $\langle\vec{x},\vec{x}\rangle=0$
+\end_inset
+
+, then
+\begin_inset Formula 
+\begin{align*}
+\langle\vec{x},\vec{x}\rangle= & 0\\
+= & 0^{2}=n0^{2}=\sum_{i=1}^{n}0^{2}\\
+= & 0^{2}+0^{2}+\cdots+0^{2}\\
+\langle\vec{x},\vec{x}\rangle= & 0\times0+0\times0+\cdots+0\times0\\
+\Leftrightarrow\vec{x}= & \vec{0}\\
+\therefore\langle\vec{x},\vec{x}\rangle=0 & \Leftrightarrow\vec{x}=\vec{0}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(3) Let 
+\begin_inset Formula $\vec{x},\vec{y}\in\mathbb{R}^{n}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\langle\vec{x},\vec{y}\rangle=\sum_{i=1}^{n}x_{i}y_{i}=\sum_{i=1}^{n}y_{i}x_{i}=\langle\vec{y},\vec{x}\rangle
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(4) Observe that
+\begin_inset Formula 
+\begin{align*}
+\langle\vec{x}+\vec{y},\vec{z}\rangle=\sum_{i=1}^{n}(x_{i}+y_{i})z_{i}=\sum_{i=1}^{n}(x_{i}z_{i}+y_{i}z_{i})=\sum_{i=1}^{n}x_{i}z_{i}+\sum_{i=1}^{n}y_{i}z_{i}=\langle\vec{x},\vec{z}\rangle+\langle\vec{y},\vec{z}\rangle
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(5) By definition of the inner product and the pointwise addition of 2 vectors,
+ observe that
+\begin_inset Formula 
+\[
+\langle\vec{x},\vec{y}+\vec{z}\rangle=\sum_{i=1}^{n}x_{i}(y_{i}+z_{i})=\sum_{i=1}^{n}(x_{i}y_{i}+x_{i}z_{i})=\sum_{i=1}^{n}x_{i}y_{i}+\sum_{i=1}^{n}x_{i}z_{i}=\langle\vec{x},\vec{y}\rangle+\langle\vec{x},\vec{z}\rangle
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+(6) By definition of the inner product and the s-multiplication, observe
+ that 
+\begin_inset Formula 
+\[
+\langle\lambda\vec{x},\mu\vec{y}\rangle=\sum_{i=1}^{n}(\lambda x_{i})(\mu y_{i})=\sum_{i=1}^{n}(\lambda\mu)(x_{i}y_{i})=\lambda\mu\sum_{i=1}^{n}x_{i}y_{i}=\lambda\mu\langle\vec{x},\vec{y}\rangle
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Corollary
+The inner product operator 
+\begin_inset Formula $\langle\cdot,\cdot\rangle$
+\end_inset
+
+ is linear.
+\end_layout
+
+\begin_layout Proof
+Immidiete
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "compinpro"
+
+\end_inset
+
+Let 
+\begin_inset Formula $\vec{x},\vec{y}\in\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda,\mu\in\mathbb{R}\setminus\{0\}$
+\end_inset
+
+, then the inner product of 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+ can be computed as follow 
+\begin_inset Formula 
+\begin{equation}
+\langle\vec{x},\vec{y}\rangle\coloneqq\lambda\mu\left\langle \frac{1}{\lambda}\vec{x},\frac{1}{\mu}\vec{y}\right\rangle 
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+From lemma (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "lem2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), we see that 
+\begin_inset Formula 
+\begin{align*}
+\left\langle \frac{1}{\lambda}\vec{x},\frac{1}{\mu}\vec{y}\right\rangle  & =\frac{1}{\lambda}\frac{1}{\mu}\langle\vec{x},\vec{y}\rangle\\
+\Leftrightarrow\lambda\mu\left\langle \frac{1}{\lambda}\vec{x},\frac{1}{\mu}\vec{y}\right\rangle  & =\lambda\mu\frac{1}{\lambda}\frac{1}{\mu}\langle\vec{x},\vec{y}\rangle=\langle\vec{x},\vec{y}\rangle
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We compute the inner product 
+\begin_inset Formula $\langle\vec{x},\vec{y}\rangle$
+\end_inset
+
+ by using theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "compinpro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ instead of using the definition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "[the-inner-product]"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Theoritically, there is nothing wrong in computing the inner product by
+ using the definition as it is.
+ Nevertheless, when we compute it by using programming language, we have
+ to declare what data type shall we use, and each datatype has their own
+ boundary (a.k.a.
+ bottleneck).
+ For example, suppose that we want to do numerical computation by using
+ C++ programming language, and in our code, we declare variable 
+\begin_inset Formula $\texttt{double sc}$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $\texttt{sc}$
+\end_inset
+
+ is a variable in C++ having 
+\begin_inset Formula $\texttt{double}$
+\end_inset
+
+ as its datatype, then the limits of 
+\begin_inset Formula $\texttt{sc}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\end_inset
+
+the max or min value that 
+\begin_inset Formula $\texttt{sc}$
+\end_inset
+
+ can store 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+---
+\end_layout
+
+\end_inset
+
+can be known by using the 
+\begin_inset Formula $\texttt{limits}$
+\end_inset
+
+ header as follows 
+\end_layout
+
+\begin_layout LyX-Code
+#include <iostream>
+\end_layout
+
+\begin_layout LyX-Code
+#include <limits>
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+int main(void) {
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+double min_limits = std::numeric_limits<double>::min();
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+double max_limits = std::numeric_limits<double>::max();
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+std::cout << min_limits << 
+\begin_inset Quotes eld
+\end_inset
+
+ <= x <= 
+\begin_inset Quotes eld
+\end_inset
+
+ << max_limits;
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout Standard
+by compiling and execute the program above, it yields (in our machine) 
+\begin_inset Formula 
+\[
+\texttt{2.22507e-308 <= x <= 1.79769e+308 }
+\]
+
+\end_inset
+
+Now, in theoritical perspective, let 
+\begin_inset Formula $x=1.79769\times10^{308}$
+\end_inset
+
+, if we add 
+\begin_inset Formula $x$
+\end_inset
+
+ by 
+\begin_inset Formula $x$
+\end_inset
+
+ it self then we should have that 
+\begin_inset Formula $x+x=2x=(2\times1.79769)\times10^{308}=3.59538\times10^{308}$
+\end_inset
+
+.
+ But, it is not so when we have the following code 
+\end_layout
+
+\begin_layout LyX-Code
+std::cout << max_limits + max_limits << '
+\backslash
+n';
+\end_layout
+
+\begin_layout Standard
+which yields 
+\begin_inset Formula $\texttt{inf}$
+\end_inset
+
+ (infinity, 
+\begin_inset Formula $\infty$
+\end_inset
+
+), and this is one of undesired behaviour and numerical issue that we have
+ to handle.
+\end_layout
+
+\begin_layout Standard
+In order to avoid undesired behaviour and numerical issue when computing
+ the inner product of 2 vectors, say 
+\begin_inset Formula $\vec{x}=(x_{1},x_{2},\ldots,x_{n})^{\top}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{y}=(y_{1},y_{2},\ldots,y_{n})^{\top}$
+\end_inset
+
+, we use theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "compinpro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ by choosing 
+\begin_inset Formula $\lambda,\mu\in\mathbb{R}$
+\end_inset
+
+ s.t.
+\begin_inset Formula 
+\begin{align}
+\lambda & \coloneqq\max\left\{ \vert x_{1}\vert,\vert x_{2}\vert,\ldots,\vert x_{n}|\colon\vec{x}=(x_{1},x_{2},\ldots,x_{n})^{\top}\right\} \label{eq:maxlambda}\\
+\mu & \coloneqq\max\left\{ \vert y_{1}\vert,\vert y_{2}\vert,\ldots,\vert y_{n}\vert\colon\vec{y}=(y_{1},y_{2},\ldots,y_{n})^{\top}\right\} \label{eq:maxmu}
+\end{align}
+
+\end_inset
+
+if 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+ or 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+, then 
+\begin_inset Formula $\lambda=\varepsilon$
+\end_inset
+
+ or 
+\begin_inset Formula $\mu=\varepsilon$
+\end_inset
+
+ for 
+\begin_inset Formula $0<\varepsilon\ll1$
+\end_inset
+
+ in order to avoid division by 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ In other words, we try to seek the absolute maximum elements
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+We could find it either by using linear search, or by sorting (take the
+ absolute value of the elements first before comparing them) the elements
+ and then return the element of the last index if it is sorted in ascending
+ order, or return the element in the first index if it is sorted in descending
+ order.
+\end_layout
+
+\end_inset
+
+ of 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+, if it is found that 
+\begin_inset Formula $0$
+\end_inset
+
+ is the absolute maximum elements of 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ or 
+\begin_inset Formula $\vec{y},$
+\end_inset
+
+ then we replace 
+\begin_inset Formula $0$
+\end_inset
+
+ by 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+.
+ After that, we compute their s-multiplication, 
+\begin_inset Formula $(1\slash\lambda)\vec{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $(1\slash\mu)\vec{y}$
+\end_inset
+
+, and then compute their inner product, i.e., 
+\begin_inset Formula $\langle(1\slash\lambda)\vec{x},(1\slash\mu)\vec{y}\rangle$
+\end_inset
+
+.
+ Finally, we multiply it back by 
+\begin_inset Formula $\lambda\mu$
+\end_inset
+
+ so we have computed 
+\begin_inset Formula $\langle\vec{x},\vec{y}\rangle$
+\end_inset
+
+.
+ The following is the algorithm we use to compute 
+\begin_inset Formula $\langle\vec{x},\vec{y}\rangle$
+\end_inset
+
+.
+ 
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:The-inner-product,"
+
+\end_inset
+
+The inner product, 
+\begin_inset Formula $\langle\cdot,\cdot\rangle\colon\mathbb{R}^{n}\times\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Define 
+\begin_inset Formula $\vec{x},\vec{y}\in\mathbb{R}^{n}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\vec{x}=(x_{1},x_{2},\ldots,x_{n})^{\top}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{y}=(y_{1},y_{2},\ldots,y_{n})^{\top}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\lambda,\mu\in\mathbb{R}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\lambda,\mu$
+\end_inset
+
+ are defined by using equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:maxlambda"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) and (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:maxmu"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+), respectively.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+if
+\series default
+ 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+ 
+\series bold
+then
+\series default
+ 
+\begin_inset Formula $\lambda\longleftarrow\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+if
+\series default
+ 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+ 
+\series bold
+then 
+\series default
+
+\begin_inset Formula $\mu\longleftarrow\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\vec{a},\vec{b},\vec{c}\in\mathbb{R}^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vec{a}\longleftarrow(1\slash\lambda)\vec{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vec{b}\longleftarrow(1\slash\mu)\vec{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vec{c}\longleftarrow\vec{a}\ast\vec{b}\qquad\triangleright\text{pointwise multiplication of 2 vectors are computed by using equation (\ref{eq:elwisemultiplication})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\langle\vec{x},\vec{y}\rangle\longleftarrow\lambda\mu\,\text{sum}(\vec{c})\qquad\triangleright\text{sum}(\vec{c})\text{ is computed by using Kahan's sum}$
+\end_inset
+
+ (see algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Kahan's-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Return{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\langle\vec{x},\vec{y}\rangle$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+-norm and Euclidean Norm
+\end_layout
+
+\begin_layout Definition
+(
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Solomon, J., 2015"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) The 
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+-norm is defined as a function 
+\begin_inset Formula $\|\cdot\|_{p}\colon V\to[0,\infty)$
+\end_inset
+
+ s.t.
+\begin_inset Formula 
+\begin{equation}
+\forall\vec{x}\in V\colon\vec{x}\mapsto\|\vec{x}\|_{p}\coloneqq\left(\sum_{i=1}^{n}\vert x_{i}\vert^{p}\right)^{1\slash p}
+\end{equation}
+
+\end_inset
+
+special case of 
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+-norm is having 
+\begin_inset Formula $p=2$
+\end_inset
+
+ which is known as the Euclidean norm i.e., 
+\begin_inset Formula $\parallel\cdot\parallel_{2}\colon V\to\mathbb{R}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula 
+\begin{equation}
+\forall\vec{x}\in V\colon\vec{x}\mapsto\|\vec{x}\|_{2}\coloneqq\sqrt{\sum_{i=1}^{n}x_{i}^{2}}
+\end{equation}
+
+\end_inset
+
+or having 
+\begin_inset Formula $p=1$
+\end_inset
+
+, we have the taxi cab norm
+\begin_inset Formula 
+\begin{equation}
+\forall\vec{x}\in V\colon\vec{x}\mapsto\|\vec{x}\|_{1}\coloneqq\sum_{i=1}^{n}\vert x_{i}\vert
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Lemma
+\begin_inset Formula $\forall\vec{x}\in V\colon\forall\lambda\in\mathbb{R}\colon\|\lambda\vec{x}\|_{p}=\vert\lambda\vert\|\vec{x}\|_{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+By using the definition of s-multiplication and the 
+\begin_inset Formula $\|\cdot\|_{p}$
+\end_inset
+
+ operator, let 
+\begin_inset Formula $\vec{x}\in V$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda\in\mathbb{R}$
+\end_inset
+
+, then observe that 
+\begin_inset Formula 
+\begin{align*}
+\|\lambda\vec{x}\| & =\left(\sum_{i=1}^{n}\vert\lambda x_{i}\vert^{p}\right)^{1\slash p}=\left(\sum_{i=1}^{n}\vert\lambda\vert^{p}\vert x_{i}\vert^{p}\right)^{1\slash p}=\left(\vert\lambda\vert^{p}\sum_{i=1}^{n}\vert x_{i}\vert^{p}\right)^{1\slash p}\\
+ & =\left(\vert\lambda\vert^{p}\right)^{1\slash p}\left(\sum_{i=1}^{n}\vert x_{i}\vert^{p}\right)^{1\slash p}=\vert\lambda\vert^{p\slash p}\left(\sum_{i=1}^{n}\vert x_{i}\vert^{p}\right)^{1\slash p}=\vert\lambda\vert\left(\sum_{i=1}^{n}\vert x_{i}\vert^{p}\right)^{1\slash p}\\
+ & =\vert\lambda\vert\|\vec{x}\|_{p}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Theorem
+Let 
+\begin_inset Formula $\vec{x}\in V$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda\in\mathbb{R}\setminus\{0\}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{equation}
+\|\vec{x}\|\coloneqq\vert\lambda\vert\left|\left|\frac{1}{\lambda}\vec{x}\right|\right|_{p}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+From lemma 3, we see that 
+\begin_inset Formula 
+\begin{align*}
+\left|\left|\frac{1}{\lambda}\vec{x}\right|\right|_{p} & =\left|\frac{1}{\lambda}\right|\vert\vert\vec{x}\vert\vert_{p}\\
+\Leftrightarrow\vert\lambda\vert\left|\left|\frac{1}{\lambda}\vec{x}\right|\right|_{p} & =\vert\lambda\vert\left|\frac{1}{\lambda}\right|\vert\vert\vec{x}\vert\vert_{p}=\vert\lambda\vert\frac{1}{\vert\lambda\vert}\vert\vert\vec{x}\vert\vert_{p}=\vert\vert\vec{x}\vert\vert_{p}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As always, due to numerical issue, we compute the 
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+-norm for 
+\begin_inset Formula $\vec{x}=(x_{1},x_{2},\ldots,x_{n})^{\top}$
+\end_inset
+
+ by using theorem 2 where we choose 
+\begin_inset Formula $\lambda\in\mathbb{R}$
+\end_inset
+
+ using equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:maxlambda"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ The following algorithm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:The--norm,"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ is algorithm we use to compute it (
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Solomon, J., 2015"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Once we establish algorithm to compute the 
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+-norm of a vector, then we compute the Euclidean norm by substitute 
+\begin_inset Formula $p=2$
+\end_inset
+
+, and 
+\begin_inset Formula $p=1$
+\end_inset
+
+ for the taxi cab norm.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:The--norm,"
+
+\end_inset
+
+The 
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+-norm, 
+\begin_inset Formula $\|\cdot\|_{p}\colon\mathbb{R}^{n}\to[0,\infty)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Define 
+\begin_inset Formula $\vec{x}\in\mathbb{R}^{n}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\vec{x}=(x_{1},x_{2},\ldots,x_{n})^{\top}$
+\end_inset
+
+ and 
+\begin_inset Formula $p\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Let 
+\begin_inset Formula $\lambda\in\mathbb{R}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\lambda\longleftarrow\max\text{abs}(\vec{x})\qquad\triangleright\text{abs }$
+\end_inset
+
+is computed by using equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:elwiseabs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+if 
+\begin_inset Formula $\lambda=0$
+\end_inset
+
+ then 
+\series default
+
+\begin_inset Formula $\lambda\longleftarrow\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+let 
+\begin_inset Formula $\vec{a}\in\mathbb{R}^{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $b\in\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vec{a}\longleftarrow(1/\lambda)\vec{x}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $b\longleftarrow\text{sum}(\text{pow}(\text{abs}(\vec{a}),p))\qquad\triangleright\text{pow\ensuremath{(\cdot,\cdot)}}$
+\end_inset
+
+ is computed by using equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:elwisepoweredby"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\|\vec{x}\|_{p}\longleftarrow\lambda b^{1\slash p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Return{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\|\vec{x}\|_{p}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+From the Euclidean norm we define the Euclidean distance of 2 vectors, say
+ 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+, as a map 
+\begin_inset Formula $d\colon\mathbb{\mathbb{R}}^{n}\times\mathbb{R}^{n}\to\mathbb{R}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula 
+\begin{equation}
+\forall\vec{x},\vec{y}\in\mathbb{R}^{n}\colon(\vec{x},\vec{y})\mapsto d(\vec{x},\vec{y})\coloneqq\|\vec{x}-\vec{y}\|_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Normal vector 
+\begin_inset Formula $\hat{x}\in V$
+\end_inset
+
+ is a vector which has its Euclidean norm is equal to one, i.e., 
+\begin_inset Formula $\|\hat{x}\|_{2}=1$
+\end_inset
+
+\SpecialChar endofsentence
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "normalvec"
+
+\end_inset
+
+
+\begin_inset Formula $\forall\vec{x}\in\mathbb{R}^{n}\setminus\{\vec{0}\}\colon\exists\hat{x}\in\mathbb{R}^{n}\colon\hat{x}=\|\vec{x}\|_{2}^{-1}\vec{x}\Leftrightarrow\|\hat{x}\|_{2}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\vec{x},\hat{x}\in\mathbb{R}^{n}\setminus\{\vec{0}\}$
+\end_inset
+
+, s.t., 
+\begin_inset Formula $\hat{x}=\|\vec{x}\|_{2}^{-1}\vec{x}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\|\hat{x}\|_{2}=\|\|\vec{x}\|_{2}^{-1}\vec{x}\|_{2}=\vert\|\vec{x}\|_{2}^{-1}\vert\|\vec{x}\|_{2}=\|\vec{x}\|_{2}^{-1}\|\vec{x}\|_{2}=\|\vec{x}\|_{2}^{1-1}=\|\vec{x}\|_{2}^{0}=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Design and Implementation
+\end_layout
+
+\begin_layout Standard
+It's better before we code/implementing the abstract concept of mathematics/pseu
+docode into a real code/programming language, we design the class of object
+ by using one of Unified Modelling Language's (UML) diagrams, i.e., class
+ diagram (
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Fowler, M., 2004"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Moreover, we need to make the structure of our files which make the files
+ more organize.
+ To do so, we create a folder name Linav which consist of 4 files (see Figure
+ 1).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename package_diag.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Files in Linav folder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All of our files are located in a folder name Linav, which contain 4 files
+ in total, i.e., 1 file which has extension 
+\begin_inset Formula $\texttt{.h}$
+\end_inset
+
+, and 3 files which have extension 
+\begin_inset Formula $\texttt{.cpp}$
+\end_inset
+
+, these files are 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+, 
+\begin_inset Formula $\texttt{linav.cpp}$
+\end_inset
+
+, 
+\begin_inset Formula $\texttt{linop.cpp}$
+\end_inset
+
+, and 
+\begin_inset Formula $\texttt{printprog.cpp}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+All class and required functions are declared in 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+ file.
+ In 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+, we declare a class name Linav, it consists of 
+\begin_inset Formula $2$
+\end_inset
+
+ private data members, 
+\begin_inset Formula $1$
+\end_inset
+
+ public default constructor, 
+\begin_inset Formula $2$
+\end_inset
+
+ public parameterized constructors, 
+\begin_inset Formula $3$
+\end_inset
+
+ public member functions, and 
+\begin_inset Formula $3$
+\end_inset
+
+ public member operators (see Figure 2).
+ And, it contains declaration of 
+\begin_inset Formula $14$
+\end_inset
+
+ functions to print the results, and 
+\begin_inset Formula $10$
+\end_inset
+
+ functions that take Linav's object as its input.
+ File 
+\begin_inset Formula $\texttt{linav.cpp}$
+\end_inset
+
+ contain a program for Linav's class, file 
+\begin_inset Formula $\texttt{linop.cpp}$
+\end_inset
+
+ contains program to compute these 
+\begin_inset Formula $10$
+\end_inset
+
+ functions that take Linav's object as its input, and finally 
+\begin_inset Formula $\texttt{printprog.cpp}$
+\end_inset
+
+ contain program how we print the results.
+ All of these class and functions are declared in the scope of namespace
+ named anum (NUMerical Analysis, and it is readed as 
+\emph on
+a-noom
+\emph default
+) in 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+ file.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Linav.svg
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Class diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From Figure 2 we declare a Linav class, 14 functions to print, and 10 functions
+ in 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+ file as follow
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+#ifndef LINAV_H
+\end_layout
+
+\begin_layout LyX-Code
+#define LINAV_H
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+#include <vector>
+\end_layout
+
+\begin_layout LyX-Code
+#include <string>
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+namespace anum {
+\end_layout
+
+\begin_layout LyX-Code
+class Linav {                                                          
+                   
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+std::vector<double> x;
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+unsigned int D; // dimension                                           
+        
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+public:                                                                
+                   
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad\qquad$
+\end_inset
+
+Linav(); // default constructor, return a null vector in 2-dimension   
+                   
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad\qquad$
+\end_inset
+
+Linav(unsigned int dimension); // return a null vector in d-dimension  
+                   
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad\qquad$
+\end_inset
+
+Linav(std::vector<double>);                                            
+                   
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad\qquad$
+\end_inset
+
+double accs(unsigned int ith_position); // get the ith-value of x      
+                   
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad\qquad$
+\end_inset
+
+void updt(unsigned int ith_position, double); // update the ith-element
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad\qquad$
+\end_inset
+
+unsigned int get_dim();                                                
+                   
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad\qquad$
+\end_inset
+
+Linav operator +(Linav rhs); // pointwise addition                     
+                   
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad\qquad$
+\end_inset
+
+Linav operator -(Linav rhs); // pointwise substraction                 
+                   
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad\qquad$
+\end_inset
+
+Linav operator*(Linav rhs); // pointwise multiplication of 2 vectors   
+                                                            
+\end_layout
+
+\begin_layout LyX-Code
+};
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+// All of these void functions are in printprog.cpp                     
+                  
+\end_layout
+
+\begin_layout LyX-Code
+void print(Linav);                                                     
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void println(Linav);                                                   
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void print(Linav, std::string sentence);                               
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void println(Linav, std::string sentence);                             
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void print(std::string sentence, Linav);                               
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void println(std::string sentence, Linav);                             
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void print(double);                                                    
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void println(double);                                                  
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void print(double, std::string sentence);                              
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void println(double, std::string sentence);                            
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void print(std::string sentence, double);                              
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void println(std::string sentence, double);                            
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void print(std::string sentence);                                      
+                   
+\end_layout
+
+\begin_layout LyX-Code
+void println(std::string sentence);                                    
+                   
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+// All of these linear operators are in linop.cpp file                  
+                  
+\end_layout
+
+\begin_layout LyX-Code
+Linav operator*(double, Linav) // the s-multiplication
+\end_layout
+
+\begin_layout LyX-Code
+Linav operator*(Linav, double);                                        
+                   
+\end_layout
+
+\begin_layout LyX-Code
+Linav abs(Linav); // the pointwise absolute                            
+                    
+\end_layout
+
+\begin_layout LyX-Code
+double sum(Linav); // the Kahan's sum
+\end_layout
+
+\begin_layout LyX-Code
+Linav power(Linav, double); // the pointwise power                     
+                   
+\end_layout
+
+\begin_layout LyX-Code
+double lpnorm(Linav, double p); // the lpnorm                          
+                   
+\end_layout
+
+\begin_layout LyX-Code
+double eunorm(Linav); // the Euclidean norm                            
+                   
+\end_layout
+
+\begin_layout LyX-Code
+double inpro(Linav, Linav); // the inner product                       
+                   
+\end_layout
+
+\begin_layout LyX-Code
+double distance(Linav, Linav); // the Euclidean distance of two vectors
+\end_layout
+
+\begin_layout LyX-Code
+Linav normalize(Linav); // compute the normalize vector
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+#endif
+\end_layout
+
+\begin_layout Section
+Results and Discussion
+\end_layout
+
+\begin_layout Standard
+In order to use our linav header, it is better to create a new folder having
+ your purpose as the name of this new folder, and in that new folder contains
+ of our Linav folder and your main file named 
+\begin_inset Formula $\texttt{mainprog.cpp}$
+\end_inset
+
+.
+ For the purpose of demonstration only, suppose that our new folder has
+ name 
+\begin_inset Formula $\texttt{linear\_algebra}$
+\end_inset
+
+, in our case, it consists of our Linav folder, 
+\begin_inset Formula $\texttt{mainprog.cpp}$
+\end_inset
+
+, and 2 bash script files, i.e., 
+\begin_inset Formula $\texttt{compandrun.sh}$
+\end_inset
+
+, and 
+\begin_inset Formula $\texttt{compfile.sh}$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $\texttt{compfile.sh}$
+\end_inset
+
+, it is a script to compile the program and show the compile time.
+\end_layout
+
+\begin_layout LyX-Code
+#!/bin/bash
+\end_layout
+
+\begin_layout LyX-Code
+echo 
+\begin_inset Quotes eld
+\end_inset
+
+g++ Linav/linav.h Linav/linav.cpp Linav/linop.cpp Linav/printprog.cpp 
+\end_layout
+
+\begin_layout LyX-Code
+mainfile.cpp -o mainfile -O2 --time
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout LyX-Code
+g++ Linav/linav.h Linav/linav.cpp  Linav/linop.cpp Linav/printprog.cpp 
+\end_layout
+
+\begin_layout LyX-Code
+mainfile.cpp -o mainfile -O2 --time;
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset Formula $\texttt{compandrun.sh}$
+\end_inset
+
+ is a script to compile the 
+\begin_inset Formula $\texttt{mainprogram.cpp}$
+\end_inset
+
+ file and then run the 
+\begin_inset Formula $\texttt{mainprogram}$
+\end_inset
+
+ file, the script is written as follow.
+\end_layout
+
+\begin_layout LyX-Code
+#!/bin/bash
+\end_layout
+
+\begin_layout LyX-Code
+echo 
+\begin_inset Quotes eld
+\end_inset
+
+g++ Linav/linav.h Linav/linav.cpp Linav/linop.cpp Linav/printprog.cpp 
+\end_layout
+
+\begin_layout LyX-Code
+mainfile.cpp -o mainfile -O2
+\begin_inset Quotes erd
+\end_inset
+
+;
+\end_layout
+
+\begin_layout LyX-Code
+g++ Linav/linav.h Linav/linav.cpp  Linav/linop.cpp Linav/printprog.cpp 
+\end_layout
+
+\begin_layout LyX-Code
+mainfile.cpp -o mainfile -O2;
+\end_layout
+
+\begin_layout LyX-Code
+./mainfile;
+\end_layout
+
+\begin_layout Standard
+Finally, our 
+\begin_inset Formula $\texttt{mainprog.cpp}$
+\end_inset
+
+ file is written as follows, in the first line we include our header 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+, i.e., 
+\end_layout
+
+\begin_layout LyX-Code
+#include 
+\begin_inset Quotes eld
+\end_inset
+
+Linav/linav.h
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then, in the main function, we construct 4 Linav's objects by using constructor,
+\end_layout
+
+\begin_layout LyX-Code
+// constructor
+\end_layout
+
+\begin_layout LyX-Code
+anum::Linav x(std::vector<double>{1.0, 2.0, 3.0});
+\end_layout
+
+\begin_layout LyX-Code
+anum::Linav y(std::vector<double>{1.0, 1.0, 1.0});
+\end_layout
+
+\begin_layout LyX-Code
+anum::Linav x0(3); // null vector in 3-dimension
+\end_layout
+
+\begin_layout LyX-Code
+anum::Linav y0; // null vector in 2-dimension
+\end_layout
+
+\begin_layout Standard
+Now, we are able to compute the pointwise addition, substraction, multiplication
+, and s-multiplication
+\end_layout
+
+\begin_layout LyX-Code
+// pointwise addition, substraction, and multiplication, and
+\end_layout
+
+\begin_layout LyX-Code
+// s-multiplication
+\end_layout
+
+\begin_layout LyX-Code
+anum::print("
+\backslash
+nDemonstration of pointwise addition, substraction, ");
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("and multiplication 
+\backslash
+nand s-multiplication");
+\end_layout
+
+\begin_layout LyX-Code
+anum::Linav z = x + y;
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("Vector x = ", x);
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("Vector y = ", y);
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("null vector, x0 = ", x0);
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("null vector in plane = ", y0);
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("Pointwise addition.
+ x + y = ", z);
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("Pointwise substraction.
+ x - y = ", x - y);
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("s-multiplication.
+ 2 * x = ", 2 * x);
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("s-multiplication.
+ x * 2 = ", x * 2);
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("x + (y * 2) = ", x + (y * 2.0));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("x * (y * 2) = ", x * (y * 2.0));
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We use 
+\begin_inset Formula $\texttt{try-catch}$
+\end_inset
+
+ technique to catch out of range error and domain error (
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Stroustrup, B., 2001"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ So, if an error occurs, then it produces no side effect and the program
+ does not terminate (but maybe it will produce undesired results).
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+// catch the exception
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("
+\backslash
+nDemonstration of an available exception");
+\end_layout
+
+\begin_layout LyX-Code
+anum::print(x + anum::Linav(std::vector<double> {3.0, 5.0}));
+\end_layout
+
+\begin_layout LyX-Code
+println("x is still ", x);
+\end_layout
+
+\begin_layout LyX-Code
+anum::print(x - anum::Linav(std::vector<double> {3.0, 5.0}));
+\end_layout
+
+\begin_layout LyX-Code
+println("x is still ", x);
+\end_layout
+
+\begin_layout LyX-Code
+anum::print(x * anum::Linav(std::vector<double> {3.0, 5.0}));
+\end_layout
+
+\begin_layout LyX-Code
+println("x is still ", x);
+\end_layout
+
+\begin_layout LyX-Code
+anum::print(x.accs(5));
+\end_layout
+
+\begin_layout LyX-Code
+x.updt(5, 3.2);
+\end_layout
+
+\begin_layout LyX-Code
+anum::println(inpro(x,y0));
+\end_layout
+
+\begin_layout LyX-Code
+double a = distance(x, y0);
+\end_layout
+
+\begin_layout Standard
+Since we have computed the object which is behave like vector in linear
+ algebra, then we may compute a function 
+\begin_inset Formula $f$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\mathbb{R}^{n}\ni\vec{x}\mapsto f(\vec{x})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout LyX-Code
+// operators
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("
+\backslash
+nDemonstration of a linear operators");
+\end_layout
+
+\begin_layout LyX-Code
+z.updt(2, -7.35);
+\end_layout
+
+\begin_layout LyX-Code
+anum::print("z update = ", z);
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("; abs(z) = ", abs(z));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("sum(x) = ", sum(x));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("sum(y) = ", sum(y));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("sum(z) = ", sum(z));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("power(x, 0.5) = x^0.5 = ", power(x, 0.5));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("lpnorm(y, 2) = ", lpnorm(y, 2.0));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("lpnorm(x, 7) = ", lpnorm(x, 7.0));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("inpro(x, z) = <x,z> = ", inpro(x, z));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("<0,0> in R^3 = ", inpro(x0, x0));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("distance(x, y) = ",distance(x, y));
+\end_layout
+
+\begin_layout LyX-Code
+anum::print("normalize x = ", normalize(x));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println(" => ||hat(x)|| = ", eunorm(normalize(x)));
+\end_layout
+
+\begin_layout LyX-Code
+anum::print("normalize y = ", normalize(y));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println(" => ||hat(y)|| = ", eunorm(normalize(y)));
+\end_layout
+
+\begin_layout LyX-Code
+anum::print("normalize z = ", normalize(z));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println(" => ||hat(z)|| = ", eunorm(normalize(z)));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("eunorm(x) = ", eunorm(x));
+\end_layout
+
+\begin_layout LyX-Code
+anum::println("lpnorm(x, 2) = ", lpnorm(x, 2.0));
+\end_layout
+
+\begin_layout Standard
+The experiment is conducted on machine with the following specification,
+ Operating System: Fedora Linux 38 KDE.
+ Plasma Version: 5.27.6.
+ KDE Frameworks Version: 5.108.0.
+ Qt Version: 5.15.10.
+ Kernel Version: 6.4.6-200.fc38.x86_64 (64-bit).
+ Graphics Platform: X11.
+ Processors: 4 × Intel® Core™ i5-4210U CPU @ 1.70GHz.
+ Memory: 3.7 GiB of RAM.
+ Graphics Processor: Mesa Intel® HD Graphics 4400.
+ Manufacturer: ASUSTeK COMPUTER INC.
+ Product Name: X455LD System Version: 1.0.
+ And the implementation of 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+ is using C++ programming language with g++ (GCC) 13.2.1 20230728 (Red Hat
+ 13.2.1-1).
+ After compile the 
+\begin_inset Formula $\texttt{mainprog.cpp}$
+\end_inset
+
+ and execute 
+\begin_inset Formula $\texttt{mainprog}$
+\end_inset
+
+ file, we have the following result (see Figure 3) and the computation we
+ have done is summarized in table 1.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/muhammadrezafahlevi/Pictures/Screenshot_20231205_111152.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /home/muhammadrezafahlevi/Pictures/Screenshot_20231205_111258.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+When 
+\begin_inset Formula $\texttt{mainprog}$
+\end_inset
+
+ program is executed after compiling 
+\begin_inset Formula $\texttt{mainprog.cpp}$
+\end_inset
+
+ file
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Summary of computation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="13" columns="6">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0.3cm">
+<column alignment="left" valignment="top" width="2cm">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="2cm">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+No.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Operator
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Map
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Definition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+References
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Code
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pointwise addition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+\colon V\times V\to V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vec{x}+\vec{y}\coloneqq\left(\begin{array}{c}
+x_{1}+y_{1}\\
+x_{2}+y_{2}\\
+\vdots\\
+x_{n}+y_{n}
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+eq (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:pointwiseadd"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{x + y}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+S multiplication
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cdot\colon V\times\mathbb{R}\to V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vec{x}\lambda=\lambda\vec{x}\coloneqq\left(\begin{array}{c}
+\lambda x_{1}\\
+\lambda x_{2}\\
+\vdots\\
+\lambda x_{n}
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+eq (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:s-multiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{x * sc}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pointwise substraction
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $+\circ\cdot-1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vec{x}+(-1)\vec{y}\coloneqq\left(\begin{array}{c}
+x_{1}-y_{1}\\
+x_{2}-y_{2}\\
+\vdots\\
+x_{n}-y_{n}
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+eq (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:pointwisesubstraction"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{x - y}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pointwise powered by
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{pow}(\cdot)\colon V\times\mathbb{R}\to V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{pow}(\vec{x},\lambda)\coloneqq\left(\begin{array}{c}
+x_{1}^{\lambda}\\
+x_{2}^{\lambda}\\
+\vdots\\
+x_{n}^{\lambda}
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+eq (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:elwisepoweredby"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{pow(x, sc)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pointwise multiplication
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ast\colon V\times V\to V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vec{x}\ast\vec{y}\coloneqq\left(\begin{array}{c}
+x_{1}y_{1}\\
+x_{2}y_{2}\\
+\vdots\\
+x_{n}y_{n}
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+eq (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:elwisemultiplication"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{x * y}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pointwise absolute
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{abs}(\cdot)\colon V\to V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{abs}(\vec{x})\coloneqq\left(\begin{array}{c}
+\vert x_{1}\vert\\
+\vert x_{2}\vert\\
+\vdots\\
+\vert x_{n}\vert
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+eq (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:elwiseabs"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{abs(x)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sum of component
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{sum}(\cdot)\colon V\to\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{sum}(\vec{x})\coloneqq{\displaystyle \sum_{i=1}^{n}x_{i}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+alg 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:Kahan's-sum"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{sum(x)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Inner product
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\langle\cdot,\cdot\rangle\colon V\times V\to\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\langle\vec{x},\vec{y}\rangle\coloneqq{\displaystyle \sum_{i=1}^{n}x_{i}y_{1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+alg 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:The-inner-product,"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{inpro(x,y)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ell_{p}$
+\end_inset
+
+-norm
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vert\vert\cdot\vert\vert_{p}\colon V\to[0,\infty)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\|\vec{x}\|_{p}\coloneqq\left({\displaystyle \sum_{i=1}^{n}\vert x_{i}\vert^{p}}\right)^{{\displaystyle 1\slash p}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+alg 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:The--norm,"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{lpnorm(x,p)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Euclidean norm
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vert\vert\cdot\vert\vert_{2}\colon V\to[0,\infty)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\|\vec{x}\|_{2}\coloneqq\sqrt{{\displaystyle \sum_{i=1}^{n}x_{i}^{2}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+alg 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:The--norm,"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $p=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{eunorm(x)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Euclidean distance
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d\colon V\times V\to[0,\infty)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $d(\vec{x},\vec{y})\coloneqq\|\vec{x}-\vec{y}\|_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+alg 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:The--norm,"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset Formula $p=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{distance(x,y)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Normalize vector
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\hat{\cdot}\colon V\to V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\hat{x}\coloneqq\left(\begin{array}{c}
+\vert\vert\vec{x}\vert\vert_{2}^{-1}x_{1}\\
+\vert\vert\vec{x}\vert\vert_{2}^{-1}x_{2}\\
+\vdots\\
+\vert\vert\vec{x}\vert\vert_{2}^{-1}x_{n}
+\end{array}\right)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+thm 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "normalvec"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\texttt{normalize(x)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+Header 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+ is a C++ header that enable us to extend 
+\begin_inset Formula $\texttt{std::vector<double>}$
+\end_inset
+
+ object to behave like a vectors in linear algebra.
+ So, we may do a computation of vectors in linear algebra like pointwise
+ addition and s-multiplication.
+ This header also enable us to compute (linear) maps that take vectors as
+ its input and maps it into the set of vectors or real numbers.
+ For example, computation of norm, Euclidean distance, inner product, and
+ pointwise multiplication of 2 vectors to mention a few.
+ Eventhough 
+\begin_inset Formula $\texttt{anum::Linav}$
+\end_inset
+
+ enable us to do vectors computation, it is intended to be used mainly for
+ numerical computation which is mostly we find that require datatype of
+ the input is a real number, not a natural number.
+ Therefore, the constructor of 
+\begin_inset Formula $\texttt{anum::Linav}$
+\end_inset
+
+ only able to construct an object from 
+\begin_inset Formula $\texttt{std::vector<double>}$
+\end_inset
+
+, anything else will produce an error.
+ For the future, if we want to have 
+\begin_inset Formula $\texttt{std::vector<int>}$
+\end_inset
+
+ to behave like vectors in linear algebra by using 
+\begin_inset Formula $\texttt{anum::Linav}$
+\end_inset
+
+, then we do that only for completness purpose.
+\end_layout
+
+\begin_layout Section*
+Acknowledgements
+\end_layout
+
+\begin_layout Standard
+The author is thanked to the honorable reader who dedicated some portion
+ of his/her time reading this article.
+\end_layout
+
+\begin_layout Section*
+References
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset label
+LatexCommand label
+name "Artínez, C. et al., 2018"
+
+\end_inset
+
+Artínez, C., Rodriguez, F.J.
+ and Lozano, M.
+ (2018) 'Genetic Algorithms', in: Martí, R., Pardalos, P.
+ and Resende, M.
+ (eds) 
+\emph on
+Handbook of Heuristics
+\emph default
+.
+ Springer, Cham.
+ Available at: https://doi.org/
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+10.1007/978-3-319-07124-4_28
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset label
+LatexCommand label
+name "Bilal et-al., 2020"
+
+\end_inset
+
+Bilal.
+ et al.
+ (2020) 'Differential Evolution: A review of more than to decades of research',
+ 
+\emph on
+Engineering Application of Artificial Intelligence, 
+\emph default
+90, p.
+ 103479.
+ Available at: https://doi.org/10.1016/
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+j.engappai.2020.103479
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset label
+LatexCommand label
+name "Dadhley, R., 2019"
+
+\end_inset
+
+Dadhley, R.
+ (2019) 'Notes on THE WE-HERAEUS International Winter School on Gravity
+ and Light'.
+ Available at: https://richie291.wixsite.com/theoreticalphysics/post/the-we-heraeu
+s-international-winter-school-on-gravity-and-light (Accessed: 7 February
+ 2024).
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset label
+LatexCommand label
+name "Dytrych, T. et al., 2021"
+
+\end_inset
+
+Dytrych, T.
+ et al.
+ (2021) 'SU3lib: A C++ library for accurate computation of Wigner and Racah
+ Coefficients of SU(3)', 
+\emph on
+Computer Physics Communications, 
+\emph default
+269, p.108137.
+ Available at: https://
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+doi.org/10.1016/j.cpc.2021.108137
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset label
+LatexCommand label
+name "Fowler, M., 2004"
+
+\end_inset
+
+Fowler, M.
+ (2004) 
+\emph on
+UML Distilled: A Brief Guide to the Standard Object Modeling Language.
+
+\emph default
+ 3rd edn.
+ New York: Addison-Wesley.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset label
+LatexCommand label
+name "Katoch et al., 2021"
+
+\end_inset
+
+Katoch S., Chauchan, S.S.
+ and Kumar, V.
+ (2021) 'A review on genetic algorithms: past, present, and future', 
+\emph on
+Multimed Tools Appl, 
+\emph default
+80, pp.
+ 8102–8104.
+ Avaiable at: https://doi.org/10.1007/s11042-020-10139-6
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset label
+LatexCommand label
+name "Körner, T.W., 2012"
+
+\end_inset
+
+Körner, T.W.
+ (2012) 
+\emph on
+Vectors, Pure and Applied: A General Introduction to Linear Algebra
+\emph default
+.
+ Cambridge: Cambridge University Press.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset label
+LatexCommand label
+name "Solomon, J., 2015"
+
+\end_inset
+
+Solomon, J.
+ (2015) 
+\emph on
+Numerical Algorithms: Methods for Computer Vision, Machine Learning, and
+ Graphics
+\emph default
+.
+ USA: A.
+ K.
+ Peters, Ltd.
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset label
+LatexCommand label
+name "Stroustrup, B., 2020"
+
+\end_inset
+
+Stroustrup, B.
+ (2020) 'Thriving in a crowded and changing world: C++ 2006–2020', 
+\emph on
+Proc.
+ ACM Program.
+ Lang
+\emph default
+., 4.
+ HOPL, Article 70 (June 2020), pp.
+ 1-168.
+ Available at: https://doi.org/
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+10.1145/3386320
+\end_layout
+
+\begin_layout Description
+\begin_inset CommandInset label
+LatexCommand label
+name "Stroustrup, B., 2001"
+
+\end_inset
+
+Stroustrup, B.
+ (2001) 'Exception Safety: Concepts and Techniques', in Deny, C., Knudsen,
+ J.L., Romanovsky, A.
+ and Tripathi, A.
+ (eds), 
+\emph on
+Advances in Exception Handling Techniques.
+ 
+\emph default
+Springer Verlag Lectures Notes in Computer Science.
+ Available at: https://www.stroustrup.com/
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+except.pdf
+\end_layout
+
+\begin_layout Section*
+Appendix: Sources code
+\end_layout
+
+\begin_layout Standard
+We had explained what is written in 
+\begin_inset Formula $\texttt{mainprog.cpp}$
+\end_inset
+
+ and 
+\begin_inset Formula $\texttt{linav.h}$
+\end_inset
+
+ in section results and discussion.
+ In this appendix we provide our honorable reader with our source code,
+ i.e., what was written in file 
+\begin_inset Formula $\texttt{linav.cpp}$
+\end_inset
+
+, 
+\begin_inset Formula $\texttt{linop.cpp}$
+\end_inset
+
+, and 
+\begin_inset Formula $\texttt{printprog.cpp}$
+\end_inset
+
+.
+ The following is what was written in 
+\begin_inset Formula $\texttt{Linav/linav.cpp}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+#include "linav.h"
+\end_layout
+
+\begin_layout LyX-Code
+#include <iostream>
+\end_layout
+
+\begin_layout LyX-Code
+#include <limits>
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+/*  
+\end_layout
+
+\begin_layout LyX-Code
+ * If Linav v is constructed without
+\end_layout
+
+\begin_layout LyX-Code
+ * any parameter, then v is assumed to be
+\end_layout
+
+\begin_layout LyX-Code
+ * a zero vector in R^2.
+\end_layout
+
+\begin_layout LyX-Code
+ */
+\end_layout
+
+\begin_layout LyX-Code
+anum::Linav::Linav() {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+this->D = 2;
+\end_layout
+
+\begin_layout LyX-Code
+this->x.push_back(0);
+\end_layout
+
+\begin_layout LyX-Code
+this->x.push_back(0);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+/*  
+\end_layout
+
+\begin_layout LyX-Code
+ * Declare a null vector
+\end_layout
+
+\begin_layout LyX-Code
+ * in D-dimension
+\end_layout
+
+\begin_layout LyX-Code
+ */
+\end_layout
+
+\begin_layout LyX-Code
+anum::Linav::Linav(unsigned int dimension) {
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+for (int i = 0; i < dimension; i++)
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad\qquad$
+\end_inset
+
+this->x.push_back(0); 
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $\qquad$
+\end_inset
+
+this->D = dimension; 
+\end_layout
+
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+/*
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+ * Declare the vector x = (x1, x2, ..., xn);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+ */ 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+anum::Linav::Linav(std::vector<double> v) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+this->D = v.size();
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+std::vector<double>::const_iterator itr_v = v.begin();
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+for (int i = 0; i < D; i++) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+this->x.push_back(*itr_v);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+++itr_v;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// get the ith-value of x
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+double anum::Linav::accs(unsigned int ith_position) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+double ith_comp;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+try {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+ith_comp = this->x.at(ith_position);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+} catch (const std::out_of_range& oor) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+std::cerr << "Out of Range Error Occurs: " << oor.what() << ' ';
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+std::cerr << "the avaiable indexes are 0-" << D - 1 << '
+\backslash
+n';
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+return ith_comp; 
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// change the ith_component/element of vector
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+void anum::Linav::updt(unsigned int ith_position, double val) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+try {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+this->x.at(ith_position) = val;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+} catch(const std::out_of_range& oor) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+std::cerr << "Out of Range Error Occurs: " << oor.what() << ' ';
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+std::cerr << "the avaiable indexes are 0-" << D - 1 << '
+\backslash
+n';
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+} 
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+unsigned int anum::Linav::get_dim() { return this->D; } // get the dimension
+ of x
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// pointwsie addition
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+anum::Linav anum::Linav::operator+(Linav rhs) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+std::vector<double> v;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+try {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+// check the criteria of adding two vectors, if two vectors
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// have different dimension each other, then domain error
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// will be catched.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+if (D != rhs.get_dim())
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\begin_inset Formula $\qquad$
+\end_inset
+
+throw std::domain_error(
+\begin_inset Quotes eld
+\end_inset
+
+cannot add two vectors having different dimension
+\backslash
+n
+\begin_inset Quotes erd
+\end_inset
+
+);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+for (int ith = 0; ith < D; ith++) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+double temp = x.at(ith) + rhs.accs(ith);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+v.push_back(temp);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+} catch (const std::domain_error& doerr) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+std::cerr << "Domain Error Occurs: " << doerr.what();
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+Linav C(v); // create a new instance of vector C
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+return C;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// pointwise multiplication
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+anum::Linav anum::Linav::operator*(Linav rhs) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+std::vector<double> v;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+try {
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\begin_inset Formula $\qquad$
+\end_inset
+
+// check the criteria of performing pointwise multiplication of two vectors.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\begin_inset Formula $\qquad$
+\end_inset
+
+// If two vectors have different dimension, then terminate the program.
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+if (D != rhs.get_dim())
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\begin_inset Formula $\qquad$
+\end_inset
+
+throw std::domain_error("cannot do pointwise multiplication of two vectors
+ having different dimension
+\backslash
+n");
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+for (int ith = 0; ith < D; ith++) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+double temp = x.at(ith) * rhs.accs(ith);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+v.push_back(temp);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+} catch (const std::domain_error &doerr) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+std::cerr << "Domain Error Occurs: " << doerr.what();
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+Linav V(v);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+return V;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// pointwise substraction
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+anum::Linav anum::Linav::operator-(Linav rhs) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+std::vector<double> v;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+try {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+// check the criteria of performing pointwise substraction of two vectors.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// If two vectors have different dimension, then domain error will be catched.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+if (D != rhs.get_dim())
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\begin_inset Formula $\qquad$
+\end_inset
+
+throw std::domain_error("cannot substract two vectors having different dimension
+\backslash
+n");
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+for (int ith = 0; ith < D; ith++) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+double temp = x.at(ith) - rhs.accs(ith);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+v.push_back(temp);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+} catch (const std::domain_error &doerr) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+std::cerr << "Domain Error Occurs: " << doerr.what();
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+Linav V(v);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+return V;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout Standard
+The following is what was written in 
+\begin_inset Formula $\texttt{Linav/linop.cpp}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+#include "linav.h"
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+#include <math.h>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+#include <limits>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+#include <iostream>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+#include <stdexcept>
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+anum::Linav anum::operator*(double scalar, Linav rhs) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+std::vector<double> v;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+const unsigned int Dimension = rhs.get_dim();
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+for (int ith = 0; ith < Dimension; ith++) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+double temp = scalar * rhs.accs(ith);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+v.push_back(temp);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+anum::Linav V(v);
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+return V;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+anum::Linav anum::operator*(Linav rhs, double scalar) { return scalar *
+ rhs; }
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+// pointwise absolute value
+\end_layout
+
+\begin_layout LyX-Code
+anum::Linav anum::abs(Linav v) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+std::vector<double> v_abs;
+\end_layout
+
+\begin_layout LyX-Code
+const unsigned int Dimension = v.get_dim();
+\end_layout
+
+\begin_layout LyX-Code
+for (int ith = 0; ith < Dimension; ith++) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+double temp = std::abs(v.accs(ith));
+\end_layout
+
+\begin_layout LyX-Code
+v_abs.push_back(temp);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+Linav V(v_abs);
+\end_layout
+
+\begin_layout LyX-Code
+return V;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+// The Kahan's sum
+\end_layout
+
+\begin_layout LyX-Code
+double anum::sum(Linav v) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+double khs = 0.0; // kahan's sum
+\end_layout
+
+\begin_layout LyX-Code
+double khs_next = 0.0; // next khs
+\end_layout
+
+\begin_layout LyX-Code
+double c = 0.0; // compute the compensate
+\end_layout
+
+\begin_layout LyX-Code
+double temp = 0.0;
+\end_layout
+
+\begin_layout LyX-Code
+const unsigned int Dimension = v.get_dim();
+\end_layout
+
+\begin_layout LyX-Code
+for (int ith = 0; ith < Dimension; ith++) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+temp = v.accs(ith) + c;
+\end_layout
+
+\begin_layout LyX-Code
+khs_next = khs + temp;
+\end_layout
+
+\begin_layout LyX-Code
+c = temp - (khs_next - khs);
+\end_layout
+
+\begin_layout LyX-Code
+khs = khs_next;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+return khs;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+anum::Linav anum::power(Linav v, double p) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+const unsigned int Dimension = v.get_dim();
+\end_layout
+
+\begin_layout LyX-Code
+std::vector<double> v_pwr;
+\end_layout
+
+\begin_layout LyX-Code
+for (int ith = 0; ith < Dimension; ith++) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+double temp = std::pow(v.accs(ith), p);
+\end_layout
+
+\begin_layout LyX-Code
+v_pwr.push_back(temp);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+Linav V(v_pwr);
+\end_layout
+
+\begin_layout LyX-Code
+return V;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+double anum::lpnorm(Linav v, double p) { 	
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+// maxel is maximum absolute element.
+ To avoid division 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// by zero, initially, maxel is epsilon 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+double maxel = std::numeric_limits<double>::epsilon(); 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// looking for the max absolute element of v 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// by using linear search; 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+const unsigned int Dimension = v.get_dim(); 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+for (int ith = 0; ith < Dimension; ith++) { 		
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+bool is_updt = std::abs(v.accs(ith)) > maxel; 		
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+maxel = is_updt ? std::abs(v.accs(ith)) : maxel; 	
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+} 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// create a new vector x s.t.
+ x := (1/maxel) v 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+std::vector<double> vtemp; 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+for (int ith = 0; ith < Dimension; ith++) { 		
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+double temp = std::abs(v.accs(ith) / maxel); 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+vtemp.push_back(temp); 	
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+} 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+Linav vpnorm(vtemp); 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+vpnorm = power(vpnorm, p); // pointwise powered by p 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// take the pth-root after Kahan's sum, then multiply it back by 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// maximum element maxel to get the pnorm of v 	
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+double pnormval = maxel * std::pow(sum(vpnorm), std::pow(p, -1.0));
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+return pnormval; 
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// special case of lpnorm is when p = 2, 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// it's known as the Euclidean norm
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+double anum::eunorm(Linav v) { return lpnorm(v, 2.0); }
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// inner product
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+double anum::inpro(Linav u, Linav v) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+double val_inpro;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+try {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+// check the criteria of performing inner product.
+ If two vectors
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// have different dimension, then domain error will be catched
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+if (u.get_dim() != v.get_dim())
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\begin_inset Formula $\qquad$
+\end_inset
+
+throw std::domain_error("Cannot take inner product of two vectors having
+ different dimension
+\backslash
+n");
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// looking for the max of the absolute element of vectors u and v
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+// by using linear search.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+const unsigned int Dimension = u.get_dim();
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+double u_max = std::numeric_limits<double>::epsilon();
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+double v_max = std::numeric_limits<double>::epsilon();
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+for (int ith = 0; ith < Dimension; ith++) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+double u_temp = std::abs(u.accs(ith));
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+double v_temp = std::abs(v.accs(ith));
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+if (u_temp > u_max) u_max = u_temp;
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+if (v_temp > v_max) v_max = v_temp;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+Linav u_shr = u * std::pow(u_max, -1.0); // u_shr is u shrinked
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+Linav v_shr = v * std::pow(v_max, -1.0); // v_shr is v shrinked
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+val_inpro = u_max * v_max * sum(u_shr * v_shr); 	
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+} catch (const std::domain_error &doerr) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+std::cerr << "Domain Error Occurs: " << doerr.what();
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+return val_inpro;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+// the Euclidean distance of two vector
+\end_layout
+
+\begin_layout LyX-Code
+double anum::distance(Linav u, Linav v) { return eunorm(u - v); }
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+// compute the normalize vector, i.e.,
+\end_layout
+
+\begin_layout LyX-Code
+// vector which has the Euclidean norm is equal to one
+\end_layout
+
+\begin_layout LyX-Code
+anum::Linav anum::normalize(Linav v) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+double mu = eunorm(v);
+\end_layout
+
+\begin_layout LyX-Code
+Linav v_hat = v * (std::pow(mu, -1.0)); // v_hat := (1/mu) * v
+\end_layout
+
+\begin_layout LyX-Code
+return v_hat;
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout Standard
+And finally, the following is what was written in 
+\begin_inset Formula $\texttt{printprog.cpp}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+#include "linav.h" 
+\end_layout
+
+\begin_layout LyX-Code
+#include <iostream>
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::print(Linav v) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+const unsigned int Dimension = v.get_dim();
+\end_layout
+
+\begin_layout LyX-Code
+std::cout << "(";
+\end_layout
+
+\begin_layout LyX-Code
+for (int i = 0; i < Dimension; i++)
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+std::cout << v.accs(i) << ", ";
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+std::cout << "
+\backslash
+b
+\backslash
+b 
+\backslash
+b)";
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::println(Linav v) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+print(v);
+\end_layout
+
+\begin_layout LyX-Code
+std::cout << '
+\backslash
+n';
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::print(Linav v, std::string sentence) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+std::cout << sentence;
+\end_layout
+
+\begin_layout LyX-Code
+print(v);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::println(Linav v, std::string sentence) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+print(v, sentence);
+\end_layout
+
+\begin_layout LyX-Code
+std::cout << '
+\backslash
+n';
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::print(std::string sentence, Linav v) { print(v, sentence); }
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::println(std::string sentence, Linav v) { println(v, sentence);
+ }
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::print(double scalar) { std::cout << scalar; }
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::println(double scalar) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+print(scalar);
+\end_layout
+
+\begin_layout LyX-Code
+std::cout << '
+\backslash
+n';
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::print(double scalar, std::string sentence) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+std::cout << sentence;
+\end_layout
+
+\begin_layout LyX-Code
+print(scalar);
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::println(double scalar, std::string sentence) {
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+print(scalar, sentence);
+\end_layout
+
+\begin_layout LyX-Code
+std::cout << '
+\backslash
+n';
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+}
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::print(std::string sentence, double scalar) { print(scalar, sentence);
+ }
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::println(std::string sentence, double scalar) { println(scalar,
+ sentence); }
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::print(std::string sentence) { std::cout << sentence; }
+\end_layout
+
+\begin_layout LyX-Code
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+void anum::println(std::string sentence) { print(sentence); std::cout <<
+ '
+\backslash
+n'; }
+\end_layout
+
+\end_body
+\end_document

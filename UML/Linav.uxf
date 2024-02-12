@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>100</y>
+      <w>270</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>*Linav*
+--
+- std::vector&lt;double&gt; x
+- unsigned int D
+--
++ Vector()
++ Vector(unsigned int)
++ Vector(std::vector&lt;double&gt;)
++ double accs(unsigned int)
++ void updt(unsigned int ith position, double)
++ unsigned int get_dim()
++ Linav operator +(Linav rhs)
++ Linav operator -(Linav rhs)
++ Linav operator *(Linav rhs)
+fontsize=12</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
