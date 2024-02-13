@@ -1,5 +1,5 @@
 #include "linav.h"
-#include <math.h>
+#include <cmath>
 #include <limits>
 #include <iostream>
 #include <stdexcept>

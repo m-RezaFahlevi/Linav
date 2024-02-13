@@ -1,6 +1,7 @@
 #include "linav.h"
 #include <iostream>
 #include <limits>
+#include <stdexcept>
 
 /*
  * If Linav v is constructed without
