@@ -59,6 +59,14 @@ int main(void) {
 
 ### Linux
 
+Requirements:
+1. C++ compiler (in this example, we use g++)
+2. git
+2. Terminal
+3. Text editor (I use VIM btw)
+
+Steps:
+
 1. Create a new folder having your purpose as the name of the folder, e.g., `linav_demo`.
 
 2. Open terminal and change directory to this new folder and then clone this repository by type this command in the terminal.
@@ -89,9 +97,14 @@ g++ Linav/linav.h Linav/linav.cpp Linav/linop.cpp Linav/printprog.cpp mainprog.c
 8. For the purpose of demonstration only, copy, paste and save [linav demo sources code](#src_linav_demo) above.
 9. Open termnal and then go to `linav_demo` directory. Type`./compfile` for compile the program only, and type `./compandrun.sh` for compile and run the program.
 
-### Windows 10/11
+### Windows 10
 
-The easiest way to use `linav.h` is by using DevCpp IDE.
+The easiest way to use `linav.h` is by using [Dev-C++](https://www.bloodshed.net/) IDE.
+
+Requirements:
+1. [Dev-C++](https://www.bloodshed.net/)
+
+Steps:
 
 1. Create a new folder having your purpose as the name of this new folder, e.g., `linav_demo`.
 2. Create a new file having `mainprog.cpp` as its name.
@@ -118,3 +131,6 @@ Therefore, we should have a configuration for Compiler Options's like the figure
 
 8. After that, compile the program it should show no error in its compile log.
 9. Run the program.
+
+
+See *[Linav: Computation of Vectors in Linear Algebra](https://www.fahlevisia.com/post_articles/Linav/)* for more details about `linav.h`.
