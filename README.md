@@ -133,4 +133,8 @@ Therefore, we should have a configuration for Compiler Options's like the figure
 9. Run the program.
 
 
-See *[Linav: Computation of Vectors in Linear Algebra](https://www.fahlevisia.com/post_articles/Linav/)* for more details about `linav.h`.
+For more details about `linav.h`, see *[Linav: Computation of Vectors in Linear Algebra](https://www.fahlevisia.com/post_articles/Linav/)*.
+
+----
+
+© 2024 by [Muhammad Reza Fahlevi](https://www.fahlevisia.com/muhammadrezafahlevi.html)
